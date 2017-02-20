@@ -1,0 +1,14 @@
+@import "base/variables";
+@import "normalize";
+@include normalize;
+
+//components
+//@import components/something from components/_something.scss
+
+body {
+	color: green;
+}
+
+h1 {
+	font-size: 2.5em;
+}
