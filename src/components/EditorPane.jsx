@@ -7,6 +7,14 @@ require('mode-javascript');
 
 class EditorPane extends React.Component {
 	
+	constructor(props) {
+		super(props);
+		console.log(ace);	
+ 	  let editor = ace.edit("root");
+   	editor.setTheme("ace/theme/monokai");
+   	editor.getSession().setMode("ace/mode/javascript");
+		editor.getSession().setUseWorker(false);
+	}
 
 	//<textarea value={getExampleCode} spellCheck="false" onChange={() => dispatch(writeContent())}></textarea>
 	render () {
@@ -14,13 +22,7 @@ class EditorPane extends React.Component {
 		let {dispatch} = this.props;
 
 		let getExampleCode = () => {
-			console.log(ace);	
-  	  let editor = ace.edit("root");
-    	editor.setTheme("ace/theme/monokai");
-    	editor.getSession().setMode("ace/mode/javascript");
-			editor.getSession().setUseWorker(false);
 			
-
 			return `
 					function foo(items) {
     				let x = "All this is syntax highlighted";
