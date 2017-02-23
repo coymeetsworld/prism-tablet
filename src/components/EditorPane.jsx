@@ -1,19 +1,24 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { writeContent } from 'actions';
-require('ace');
-require('theme-monokai');
-require('mode-javascript');
+import * as ace from 'brace';
+import 'brace/mode/javascript';
+import 'brace/theme/monokai';
 
 class EditorPane extends React.Component {
 	
 	constructor(props) {
 		super(props);
+	}
+	
+	componentDidMount() {
 		console.log(ace);	
- 	  let editor = ace.edit("root");
-   	editor.setTheme("ace/theme/monokai");
-   	editor.getSession().setMode("ace/mode/javascript");
+		//ace.config.set('basePath', 'ace/');
+		const editor = ace.edit('editor');
+		editor.getSession().setMode('ace/mode/javascript');
+		editor.setTheme('ace/theme/monokai');
 		editor.getSession().setUseWorker(false);
+
 	}
 
 	//<textarea value={getExampleCode} spellCheck="false" onChange={() => dispatch(writeContent())}></textarea>
@@ -24,10 +29,10 @@ class EditorPane extends React.Component {
 		let getExampleCode = () => {
 			
 			return `
-					function foo(items) {
-    				let x = "All this is syntax highlighted";
-    				return x;
-					}`;
+function foo(items) {
+	let x = "All this is syntax highlighted";
+	return x;
+}`;
 		}
 		
 		

@@ -10,7 +10,7 @@
   "author": "Coy Sanders",
   "license": "MIT",
   "dependencies": {
-    "ace-builds": "^1.2.6",
+    "brace": "^0.10.0",
     "express": "^4.14.1",
     "normalize-scss": "^6.0.0",
     "react": "^15.4.2",

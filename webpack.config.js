@@ -12,8 +12,8 @@ module.exports = {
 	},
 	resolve: {
 		modules: [
+			//path.join(__dirname, 'node_modules/ace-builds/src-noconflict'),
 			path.join(__dirname, 'src/'),
-			path.join(__dirname, 'node_modules/ace-builds/src-noconflict/'),
 			"node_modules"
 		],
 		extensions: ['.js', '.jsx'],
@@ -23,7 +23,6 @@ module.exports = {
 			EditorPane: 'components/EditorPane.jsx',
 			actions: 'actions/actions.jsx',
 			reducers: 'reducers/reducers.jsx',
-			ace:  'ace-builds/src-noconflict/ace.js',
 		}
 	},
 	module: {
