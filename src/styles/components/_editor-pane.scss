@@ -1,0 +1,13 @@
+
+textarea {
+	resize: none;
+	margin-left: 0.25em;
+	width: 500px;
+	height: 800px;
+	background-color: $editor-pane-background;
+	color: $editor-pane-foreground;
+}
+
+textarea:focus {
+	outline: 0;
+}

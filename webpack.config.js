@@ -13,13 +13,17 @@ module.exports = {
 	resolve: {
 		modules: [
 			path.join(__dirname, 'src/'),
+			path.join(__dirname, 'node_modules/ace-builds/src-noconflict/'),
 			"node_modules"
 		],
 		extensions: ['.js', '.jsx'],
 		alias: {
 			applicationStyles: 'styles/app.scss',
 			configureStore: 'store/configureStore.jsx',
+			EditorPane: 'components/EditorPane.jsx',
+			actions: 'actions/actions.jsx',
 			reducers: 'reducers/reducers.jsx',
+			ace:  'ace-builds/src-noconflict/ace.js',
 		}
 	},
 	module: {

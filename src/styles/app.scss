@@ -3,7 +3,8 @@
 @include normalize;
 
 //components
-//@import components/something from components/_something.scss
+//@import "components/something from components/_something.scss
+@import "components/editor-pane";
 
 body {
 	color: green;
